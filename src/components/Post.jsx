@@ -1,3 +1,5 @@
+import { Avatar } from "./Avatar";
+import { Comment } from "./Comment";
 import styles from "./Post.module.css";
 
 export function Post({ hasBorder = true, author, content }) {
@@ -5,10 +7,7 @@ export function Post({ hasBorder = true, author, content }) {
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
-          <img
-            className={styles.avatar}
-            src="https://github.com/gabrieltdrk.png"
-          />
+          <Avatar profile='gabrieltdrk' />
           <div className={styles.authorInfo}>
             <strong>{author}</strong>
             <span>Web Developer</span>
@@ -22,9 +21,17 @@ export function Post({ hasBorder = true, author, content }) {
 
       <div className={styles.content}>
         <p>Fala galeraa 👋</p>
-        <p>Acabei de subir mais um projeto no meu portifa. É um projeto que eu fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀 </p>
-        <p>👉<a href="#">jane.design/doctorcare</a></p>
-        <p><a href="#">#novoprojeto #nlw #rocketseat</a></p>
+        <p>
+          Acabei de subir mais um projeto no meu portifa. É um projeto que eu
+          fiz no NLW Return, evento da Rocketseat. O nome do projeto é
+          DoctorCare 🚀{" "}
+        </p>
+        <p>
+          👉<a href="#">jane.design/doctorcare</a>
+        </p>
+        <p>
+          <a href="#">#novoprojeto #nlw #rocketseat</a>
+        </p>
       </div>
 
       <form className={styles.commentForm}>
@@ -34,6 +41,12 @@ export function Post({ hasBorder = true, author, content }) {
           <button type="submit">Publicar</button>
         </footer>
       </form>
+
+      <div className={styles.commentSection}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }
