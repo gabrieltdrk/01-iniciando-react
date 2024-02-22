@@ -15,7 +15,7 @@
 }
 
 .content p {
-  margin-top: 1.5rem;
+  margin-top: 1.rem;
 }
 
 .content a {
@@ -46,7 +46,7 @@
 }
 
 .authorInfo strong {
-  display: inline;
+  display: block;
   color: var(--gray-100);
   line-height: 1.6;
 }
@@ -84,7 +84,7 @@
 }
 
 .commentForm footer {
-    visibility: hidden;
+    visibility: hidden; 
     max-height: 0;
 }
 
@@ -102,12 +102,16 @@
     color: var(--white);
     font-weight: bold;
     cursor: pointer;
-
     transition: background-color 0.1;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button[type=submit]:not(:disabled):hover {
     background: var(--green-300);
+}
+
+.commentForm button[type=submit]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .commentSection {

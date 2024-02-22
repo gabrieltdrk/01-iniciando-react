@@ -23,7 +23,7 @@
 .commentContent header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .authorAndTime strong {
@@ -46,8 +46,6 @@
   cursor: pointer;
   line-height: 0;
   border-radius: 2px;
-
-  transition: color 0.2s;
 }
 
 .commentContent header button:hover {
@@ -68,10 +66,10 @@
   border: 0;
   color: var(--gray-400);
   cursor: pointer;
+  
   display: flex;
-  align-items: center;
-  transition: color 0.2s;
-}
+  align-items: center;  
+} 
 
 .commentContainer footer button:hover {
     color: var(--green-300);
